@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@700&family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --font__all: "Poppins", sans-serif;
+    --font__card: "Inter", sans-serif;
+    --font__footer: "Manrope", sans-serif;
+    --color__header: #3A3A3A;
+    --button__text--color: #FFF;
+    --button__background--color: #E02C6D;
+    --card__title--color: #18191F;
+    --card__price--color: rgba(0, 0, 0, 0.87);
+    --card__description--color: #787885;
+    --feature__heading--color: #0A0826;
+    --feature__description--color: #6C6C6C;
+    --footer__heading--color: #FFF;
+    --footer__paragraph--color: #D9DBE1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
