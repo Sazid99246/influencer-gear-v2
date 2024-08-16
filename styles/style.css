@@ -71,4 +71,7 @@ header {
     .nav {
         flex-direction: column;
     }
+    .nav__items {
+        gap: 16px;
+    }
 }
