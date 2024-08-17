@@ -138,7 +138,9 @@ header {
 
 /* collections styles */
 .collections-container {
-    margin: 0 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 100px;
 }
 
 .collections__heading {
@@ -202,15 +204,69 @@ header {
 
 .more a {
     text-decoration: none;
-    color: rgba(224, 44, 109, 0.87);    
+    color: rgba(224, 44, 109, 0.87);
 }
+
 .more {
     margin-top: 50px;
     float: right;
     color: rgba(224, 44, 109, 0.87);
     font-size: 16px;
     font-weight: 700;
+}
+
+/* featured section styles */
+.featured {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 96px;
     margin-bottom: 100px;
+}
+
+.featured__content--heading {
+    color: var(--feature__heading--color);
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 157.895%;
+    margin-bottom: 16px;
+}
+
+.featured__content--description {
+    color: var(--feature__description--color);
+    font-weight: 700;
+    line-height: 175%;
+    margin-bottom: 16px;
+}
+
+footer {
+    background-color: var(--feature__heading--color);
+    text-align: center;
+    color: #FFF;
+    padding: 50px 0;
+}
+
+footer h3 {
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+footer p {
+    color: var(--footer__paragraph--color);
+    font-feature-settings: 'liga' off;
+    font-family: var(--font__footer);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 171.429%;
+}
+
+footer div {
+    margin-top: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
 }
 
 /* media query for responsiveness */
@@ -221,7 +277,8 @@ header {
     }
 
     .nav,
-    .banner {
+    .banner,
+    .featured {
         flex-direction: column-reverse;
     }
 
@@ -269,6 +326,7 @@ header {
     .collections-container {
         margin: 0;
     }
+
     .collections {
         grid-template-columns: 1fr;
         justify-items: center;
@@ -276,5 +334,22 @@ header {
 
     .collection__item {
         margin-left: 15px;
+    }
+
+    .featured {
+        margin-top: 100px;
+        text-align: center;
+    }
+
+    .featured__content--heading {
+        font-size: 24px;
+    }
+
+    .featured__content--description {
+        font-size: 16px;
+    }
+
+    .featured img {
+        max-width: 100%;
     }
 }
