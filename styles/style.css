@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@700&family=Poppins:wght@400;500;600;700&display=swap');
 
 :root {
-    --font__all: "Poppins", sans-serif;
+    --font__max: "Poppins", sans-serif;
     --font__card: "Inter", sans-serif;
     --font__footer: "Manrope", sans-serif;
     --color__header: #3A3A3A;
@@ -20,7 +20,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: var(--font__all);
+    font-family: var(--font__max);
 }
 
 button {
@@ -136,12 +136,90 @@ header {
     width: 9%;
 }
 
+/* collections styles */
+.collections-container {
+    margin: 0 30px;
+}
+
+.collections__heading {
+    color: var(--color__header);
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 250%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.collections {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.collection__item {
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.15);
+    padding: 17px 15px 17px 14px;
+    max-width: 329px;
+}
+
+.collection__item__photo {
+    margin-bottom: 16px;
+}
+
+.collection__item--name {
+    color: var(--card__title--color);
+    font-feature-settings: 'liga' off;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 142.857%;
+    margin-bottom: 6px;
+}
+
+.collection__item--price {
+    color: var(--card__price--color);
+    font-family: var(--font__card);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.fa-star,
+.fa-star-half-stroke {
+    margin-top: 8px;
+    color: #FB8200;
+}
+
+.collection__item--description {
+    color: var(--card__description--color);
+    font-family: var(--font__card);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 143%;
+    width: 196px;
+    letter-spacing: 0.252px;
+}
+
+.more a {
+    text-decoration: none;
+    color: rgba(224, 44, 109, 0.87);    
+}
+.more {
+    margin-top: 50px;
+    float: right;
+    color: rgba(224, 44, 109, 0.87);
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 100px;
+}
+
 /* media query for responsiveness */
 /* mobile devices */
 @media screen and (max-width: 576px) {
     header {
         margin-bottom: 20px;
     }
+
     .nav,
     .banner {
         flex-direction: column-reverse;
@@ -173,7 +251,11 @@ header {
         display: none;
         margin: 0;
     }
-    
+
+    .main {
+        margin: 0;
+    }
+
     .sponsors {
         flex-wrap: wrap;
         gap: 20px 40px;
@@ -182,5 +264,17 @@ header {
 
     .sponsors-container {
         margin-bottom: 50px;
+    }
+
+    .collections-container {
+        margin: 0;
+    }
+    .collections {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .collection__item {
+        margin-left: 15px;
     }
 }
