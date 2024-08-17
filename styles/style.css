@@ -5,17 +5,17 @@
     --font__card: "Inter", sans-serif;
     --font__footer: "Manrope", sans-serif;
     --color__header: #3A3A3A;
-    --button__text--color: #FFF;
-    --button__background--color: #E02C6D;
+    --text--white: #FFF;
+    --button-bg: #E02C6D;
     --card__title--color: #18191F;
     --card__price--color: rgba(0, 0, 0, 0.87);
     --card__description--color: #787885;
     --feature__heading--color: #0A0826;
     --feature__description--color: #6C6C6C;
-    --footer__heading--color: #FFF;
     --footer__paragraph--color: #D9DBE1;
 }
 
+/* shared styles */
 * {
     margin: 0;
     padding: 0;
@@ -23,6 +23,16 @@
     font-family: var(--font__all);
 }
 
+button {
+    background-color: var(--button-bg);
+    display: inline-flex;
+    padding: 10px 24px;
+    align-items: center;
+    gap: 8px;
+    border: 0;
+    color: var(--text--white);
+    font-weight: 700;
+}
 
 /* header styles */
 header {
@@ -65,13 +75,66 @@ header {
     color: var(--color__header);
 }
 
+/* banner styles */
+.banner {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.banner__title {
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-size: 3.25rem;
+    font-weight: 700;
+    line-height: 70px;
+}
+
+.banner__description {
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-weight: 600;
+    max-width: 505px;
+    margin: 16px 0;
+}
+
+.banner__button {
+    border-radius: 41px;
+}
+
+.banner img {
+    max-width: 100%;
+    background-image: url(../assets/images/circle-design.svg);
+    background-repeat: no-repeat;
+    padding: 33px 31px;
+}
+
 /* media query for responsiveness */
 /* mobile devices */
 @media screen and (max-width: 576px) {
-    .nav {
-        flex-direction: column;
+    .nav,
+    .banner {
+        flex-direction: column-reverse;
     }
+
     .nav__items {
         gap: 16px;
+    }
+
+    .banner {
+        text-align: center;
+    }
+
+    .banner__title {
+        line-height: normal;
+        font-size: 28px;
+    }
+    
+    .banner__description {
+        font-size: 14px;
+    }
+
+    .banner img {
+        background-size: contain;
+        margin-top: 0;
     }
 }
